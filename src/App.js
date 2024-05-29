@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import VideoPlayer from './components/VideoPlayer';
+
+const AppContainer = styled.div`
+  text-align: center;
+  padding: 20px;
+`;
 
 function App() {
+  const [subtitleSettings, setSubtitleSettings] = useState({
+    fontSize: '16px',
+    color: '#ffffff',
+    background: 'rgba(0, 0, 0, 0.5)',
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContainer>
+      <h1>Customizable Video Player</h1>
+      <VideoPlayer settings={subtitleSettings} />
+    </AppContainer>
   );
 }
 
