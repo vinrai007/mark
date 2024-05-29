@@ -23,3 +23,5 @@
 3. one can also alter font and background colour of the font.
 
 4. RGB color picker is used to make it highly customizable.
+
+5. also the whole video player is made from scratch istead of importing any pre-built video players
